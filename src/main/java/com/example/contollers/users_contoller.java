@@ -31,5 +31,16 @@ public class users_contoller {
         return HttpResponse.created(userService.createUser(userTable));
     }
 
+    @Put("/{id}")
+    public HttpResponse<UserTable> updateUser(@PathVariable int id, @Body UserTable user) {
+        return HttpResponse.ok(userService.updateUser(id, user));
+    }
+
+    @Delete("/{id}")
+    public HttpResponse deleteUser(@PathVariable int id) {
+        userService.deleteUser(id);
+       return HttpResponse.ok();
+    }
+
 
 }
