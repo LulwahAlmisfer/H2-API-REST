@@ -4,7 +4,6 @@ import com.example.models.UserTable;
 import com.example.repository.UserRepository;
 import jakarta.inject.Singleton;
 import java.util.List;
-import java.util.Optional;
 
 import com.example.exception.UserNotFoundException;
 @Singleton
